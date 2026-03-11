@@ -1,23 +1,20 @@
 # TODO  Напишите функцию count_letters
-def count_letters(st):
-    c = {}
-    s = st.lower()
-    for i in s:
-        if i.isalpha():
-            if i in c:
-                c[i] +=1
-            else:
-                c[i] = 1
-    return c
+def count_letters(text):
+    letter_count = {}
+    text_lower = text.lower()
+    for char in text_lower:
+        if char.isalpha():
+            letter_count[char] = letter_count.get(char, 0) + 1
+    return letter_count
 
 
 # TODO Напишите функцию calculate_frequency
-def calculate_frequency(slov):
-    c = slov
-    count = sum(slov.values())
-    for i in slov:
-        c[i] = round(slov[i]/count, 2)
-    return c
+def calculate_frequency(letter_dict):
+    frequency_dict = {}
+    total_letters = sum(letter_dict.values())
+    for letter, count in letter_dict.items():
+        frequency_dict[letter] = round(count / total_letters, 2)
+    return frequency_dict
 
 
 
