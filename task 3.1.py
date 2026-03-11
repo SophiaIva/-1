@@ -3,7 +3,7 @@ def indi(item):
     for i in range(len(items_list)):
         if item == items_list[i]:
             return i
-
+ return None
 
 items_list = ['яблоко', 'банан', 'апельсин', 'груша', 'киви', 'банан']
 
